@@ -67,14 +67,6 @@ jobs:
         cd openwrt
         ../$DIY_P1_SH
         
-    - name: 自定义插件主题。
-      run: |
-          cd package
-          mkdir openwrt-packages
-          cd openwrt-packages
-          git clone https://github.com/kenzok8/openwrt-packages
-          git clone https://github.com/kenzok8/small
-
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
 
